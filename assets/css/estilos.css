@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "TwCenMT";
+    src: url("../fonts/TwCenMT.ttf") 
+}
+
+@font-face {
+    font-family: "TheHumble";
+    src: url("../fonts/TheHumble.ttf") 
+}
+
+.container {
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+    background-color: #c6e4f6;
+    margin: 0 auto;
+    font-family: TwCenMT;
+    color: #282c63;
+    padding-bottom: 25px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.content-img {
+    width: 90px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.img-header {
+    width: 90px;
+    position: absolute;
+}
+
+.img-header.left {
+    left: -20px;
+    top: -16px;
+}
+
+.img-header.right {
+    right: -12px;
+    top: -28px;
+}
+
+.text {
+    margin-top: 20px;
+}
+
+.text-sub {
+    font-size: 14pt;
+}
+
+.text-title {
+    font-family: TheHumble;
+    font-size: 24pt;
+    padding-top: 8px;
+}
+
+
+.angelito {
+    margin-top: 20px;
+}
+
+.angelito img {
+    width: 290px;
+    display: block;
+    margin: 0 auto;
+}
+
+.personas {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 11pt;
+    margin-top: -30px;
+}
+
+.padres-title {
+    font-family: TheHumble;
+}
+
+.fecha {
+    margin-top: 15px;
+    position: relative;
+}
+
+.fecha-text {
+    text-align: center;
+    font-size: 12pt;
+    position: absolute;
+    top: 10px;
+    left: 30%;
+}
+
+.fecha-text p span {
+    font-size: 14pt;
+}
+
+.misa {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 11pt;
+}
+
+.misa a {
+    text-decoration: none;
+    color: #282c63;
+}
+
+.footer {
+    margin-top: 20px;
+    border-top: 2px solid #282c63;
+    text-align: center;
+}
+
+.espera {
+    margin-top: 10px;
+    font-family: TheHumble;
+    font-size: 18pt;
+}
+
+.footer img {
+    width: 15px;
+}
+
+.recepcion {
+    text-decoration: none;
+    color: #282c63;
+}
+
+.rotar-ala-izq {
+    transform-origin: left;
+    animation: rotate-izq 2s 3s infinite;
+    transform-box: fill-box;
+}
+
+@keyframes rotate-izq {
+    0%{
+        transform: skew(0);
+    }
+    50%{
+        transform: skew(10deg, 10deg);
+    }
+}
+
+.rotar-ala-der {
+    transform-origin: right;
+    animation: rotate-der 2s 3s infinite;
+    transform-box: fill-box;
+}
+
+@keyframes rotate-der {
+    0%{
+        transform: skew(0);
+    }
+    50%{
+        transform: skew(-10deg, -10deg);
+    }
+}
+
+.mover-nube {
+    transform-origin: center;
+    animation: nube 3.5s ease-in-out infinite alternate;
+    transform-box: view-box;
+}
+
+@keyframes nube {
+   from {
+        transform: translateX(-8px);
+    }
+    to {
+        transform: translateX(8px);
+    }
+}
