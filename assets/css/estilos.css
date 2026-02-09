@@ -33,7 +33,7 @@
 .content-img {
     width: 90px;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .img-header {
@@ -179,5 +179,20 @@
     }
     to {
         transform: translateX(8px);
+    }
+}
+
+.mover-areola {
+    transform-origin: center;
+    animation: areola 3.5s ease-in-out infinite alternate;
+    transform-box: view-box;
+}
+
+@keyframes areola {
+   from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
     }
 }
