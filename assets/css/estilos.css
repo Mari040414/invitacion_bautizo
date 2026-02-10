@@ -172,7 +172,7 @@ body {
     transform-box: view-box;
 }
 
-@media (min-width: 400px) {
+/* @media (min-width: 400px) {
     .personas, .misa {
         --fz-14: 16px;
     }
@@ -188,7 +188,7 @@ body {
     .text-title {
         --fz-32: 34px;
     }
-}
+} */
 
 @media (min-width: 700px) {
     .personas, .misa {
