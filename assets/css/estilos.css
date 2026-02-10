@@ -209,6 +209,9 @@ body {
     .text-title {
         --fz-32: 38px;
     }
+    .img-header {
+        width: 112%;
+    }
 }
 
 @keyframes areola {
