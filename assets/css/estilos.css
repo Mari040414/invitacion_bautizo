@@ -172,24 +172,6 @@ body {
     transform-box: view-box;
 }
 
-/* @media (min-width: 400px) {
-    .personas, .misa {
-        --fz-14: 16px;
-    }
-    .fecha-text {
-        --fz-16: 18px;
-    }
-    .text-sub, .fecha-text p span {
-        --fz-18: 20px;
-    }
-    .espera {
-        --fz-24: 26px;
-    }
-    .text-title {
-        --fz-32: 34px;
-    }
-} */
-
 @media (min-width: 700px) {
     .personas, .misa {
         --fz-14: 18px;
@@ -205,6 +187,9 @@ body {
     }
     .text-title {
         --fz-32: 36px;
+    }
+    .img-header {
+        width: 112%;
     }
 }
 
