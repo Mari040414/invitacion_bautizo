@@ -13,11 +13,22 @@
     src: url("../fonts/TheHumble.ttf") 
 }
 
+:root {
+    --fz-14: 14px;
+    --fz-16: 16px;
+    --fz-18: 18px;
+    --fz-24: 24px;
+    --fz-32: 32px;
+}
+
+body {
+    background-color: #c6e4f6;
+}
+
 .container {
     /* max-width: 360px; */
     width: 100%;
     /* height: auto; */
-    background-color: #c6e4f6;
     margin: 0 auto;
     font-family: TwCenMT;
     color: #282c63;
@@ -56,12 +67,12 @@
 }
 
 .text-sub {
-    font-size: 14pt;
+    font-size: var(--fz-18);
 }
 
 .text-title {
     font-family: TheHumble;
-    font-size: 24pt;
+    font-size: var(--fz-32);
     padding-top: 8px;
 }
 
@@ -80,7 +91,7 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
-    font-size: 11pt;
+    font-size: var(--fz-14);
     margin-top: -30px;
 }
 
@@ -95,20 +106,20 @@
 
 .fecha-text {
     text-align: center;
-    font-size: 12pt;
+    font-size: var(--fz-16);
     position: absolute;
     top: 10px;
     left: 30%;
 }
 
 .fecha-text p span {
-    font-size: 14pt;
+    font-size: var(--fz-18);
 }
 
 .misa {
     margin-top: 10px;
     text-align: center;
-    font-size: 11pt;
+    font-size: var(--fz-14);
 }
 
 .misa a {
@@ -125,7 +136,7 @@
 .espera {
     margin-top: 10px;
     font-family: TheHumble;
-    font-size: 18pt;
+    font-size: var(--fz-24);
 }
 
 .footer img {
@@ -143,34 +154,85 @@
     transform-box: fill-box;
 }
 
-@keyframes rotate-izq {
-    0%{
-        transform: skew(0);
-    }
-    50%{
-        transform: skew(10deg, 10deg);
-    }
-}
-
 .rotar-ala-der {
     transform-origin: right;
     animation: rotate-der 2s 3s infinite;
     transform-box: fill-box;
 }
 
-@keyframes rotate-der {
-    0%{
-        transform: skew(0);
-    }
-    50%{
-        transform: skew(-10deg, -10deg);
-    }
-}
-
 .mover-nube {
     transform-origin: center;
     animation: nube 3.5s ease-in-out infinite alternate;
     transform-box: view-box;
+}
+
+.mover-areola {
+    transform-origin: center;
+    animation: areola 3.5s ease-in-out infinite alternate;
+    transform-box: view-box;
+}
+
+@media (min-width: 400px) {
+    .personas, .misa {
+        --fz-14: 16px;
+    }
+    .fecha-text {
+        --fz-16: 18px;
+    }
+    .text-sub, .fecha-text p span {
+        --fz-18: 20px;
+    }
+    .espera {
+        --fz-24: 26px;
+    }
+    .text-title {
+        --fz-32: 34px;
+    }
+}
+
+@media (min-width: 700px) {
+    .personas, .misa {
+        --fz-14: 18px;
+    }
+    .fecha-text {
+        --fz-16: 20px;
+    }
+    .text-sub, .fecha-text p span {
+        --fz-18: 22px;
+    }
+    .espera {
+        --fz-24: 28px;
+    }
+    .text-title {
+        --fz-32: 36px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .personas, .misa {
+        --fz-14: 20px;
+    }
+    .fecha-text {
+        --fz-16: 22px;
+    }
+    .text-sub, .fecha-text p span {
+        --fz-18: 24px;
+    }
+    .espera {
+        --fz-24: 30px;
+    }
+    .text-title {
+        --fz-32: 38px;
+    }
+}
+
+@keyframes areola {
+   from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
 }
 
 @keyframes nube {
@@ -182,17 +244,20 @@
     }
 }
 
-.mover-areola {
-    transform-origin: center;
-    animation: areola 3.5s ease-in-out infinite alternate;
-    transform-box: view-box;
+@keyframes rotate-der {
+    0%{
+        transform: skew(0);
+    }
+    50%{
+        transform: skew(-10deg, -10deg);
+    }
 }
 
-@keyframes areola {
-   from {
-        transform: rotate(-10deg);
+@keyframes rotate-izq {
+    0%{
+        transform: skew(0);
     }
-    to {
-        transform: rotate(10deg);
+    50%{
+        transform: skew(10deg, 10deg);
     }
 }
